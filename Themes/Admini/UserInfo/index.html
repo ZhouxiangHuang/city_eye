@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/common_header"/>
+    <link href="__CSS__/admin/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="__CSS__/admin/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__CSS__/admin/Huploadify.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    .bgcolor {
+        background: #F2F2F2;
+    }
+</style>
+<!-- Panel Other -->
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>用户列表</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-sm-12">
+
+                <!-- Example Toolbar -->
+                <div class="example-wrap">
+                    <div class="example">
+                        <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+
+                        </div>
+
+                        <table class="table table-hover" id="userListTable"
+                               data-pagination="true"
+                               data-show-refresh="true"
+                               data-show-toggle="true"
+                               data-showColumns="true">
+                        </table>
+                    </div>
+                </div>
+                <!-- End Example Toolbar -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="">
+    <form id="list_search" class="bs-example bs-example-form">
+        <if condition="check_auth(96) eq 1">
+            <a class="glyphicon glyphicon-plus" style="curosr: pointer;font-size: 20px" data_from="editUserInfo"
+               onclick="addUser(this);">添加</a>
+        </if>
+        <div class="input-group " style="width: 15%;float: left;margin-right: 1%">
+            <span class="input-group-addon">用户昵称</span>
+            <input type="text" class=" form-control" id="find_nickname">
+        </div>
+        <div class="input-group " style="width: 17%;float: left;margin-right: 1%">
+            <span class="input-group-addon">用户电话</span>
+            <input type="text" class=" form-control" id="find_phone">
+        </div>
+        <div class="input-group " style="width: 15%;float: left;margin-right: 1%">
+            <span class="input-group-addon">用户性别</span>
+            <select name="" id="find_gender" class=" form-control">
+                <option value="">全部</option>
+                <option value="1">男</option>
+                <option value="0">女</option>
+            </select>
+        </div>
+        <div class="input-group " style="width: 15%;float: left;margin-right: 1%">
+            <span class="input-group-addon">用户性别</span>
+            <select name="" id="find_status" class=" form-control">
+                <option value="">全部</option>
+                <option value="1">正常</option>
+                <option value="0">禁用</option>
+            </select>
+        </div>
+        <div style="float: left;margin-right: 1%">
+            <button type="button" onclick="p_search();" class="btn">查询</button>
+        </div>
+    </form>
+</div>
+
+
+<form id="editUserInfo" class="form-horizontal m-t" style="display: none;">
+    <div class="form-group" style="width: 100%;">
+        <label class="col-sm-3 control-label">用户手机号 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="member_phone" name="member_phone" value="" required=""
+                   aria-required="true"/>
+            <input type="hidden" id="hidden_phone">
+        </div>
+        <label class="col-sm-3 control-label">密码 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="password" class="form-control" id="member_password" name="member_password" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">关注票据类型:</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <select name="member_drafttype" id="member_drafttype">
+                <option value="">无</option>
+                <option value="0">全部</option>
+            </select>
+        </div>
+        <label class="col-sm-3 control-label">用户昵称 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="member_nickname" name="member_nickname" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">用户头像 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <span id="member_heaimg"></span>
+            <input type="hidden" id="hidden_heaimg" name="hidden_heaimg" value="">
+        </div>
+        <label class="col-sm-3 control-label">用户头像预览 :</label>
+        <div class="col-sm-7" style="height: 150px;">
+            <img id="hedimg_img" src="" alt="" style="display: block;padding-left: 15px;width: 40%;height: 90%;">
+            <!--<input type="file" name="member_heaimg" id="member_heaimg">-->
+        </div>
+        <!--<input type="hidden" name="hidden_phone" id="hidden_phone">-->
+
+        <label class="col-sm-3 control-label">真实姓名 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="member_realname" name="member_realname" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">身份证号 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="member_cardnumber" name="member_cardnumber" value=""
+                   required=""
+                   aria-required="true"/>
+            <input type="hidden" name="hidden_cardnumber" id="hidden_cardnumber">
+        </div>
+        <label class="col-sm-3 control-label">手持身份证照片 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <span id="member_cardfilepathhand"></span>
+            <input type="hidden" id="hidden_cardfilepathhand" name="hidden_cardfilepathhand" value="">
+            <!--<input type="file" name="member_cardfilepathn" id="member_cardfilepathn">-->
+        </div>
+        <label class="col-sm-3 control-label">手持身份证照片预览 :</label>
+        <div class="col-sm-7" style="height: 150px;">
+            <img id="cardfilepathhand_img" src="" alt="" style="display: block;padding-left: 15px;width: 30%;height: 90%;">
+            <!--<input type="file" name="member_heaimg" id="member_heaimg">-->
+        </div>
+        <label class="col-sm-3 control-label">身份证正面照 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <span id="member_cardfilepathn"></span>
+            <input type="hidden" id="hidden_cardfilepathn" name="hidden_cardfilepathn" value="">
+            <!--<input type="file" name="member_cardfilepathn" id="member_cardfilepathn">-->
+        </div>
+        <label class="col-sm-3 control-label">身份证正面照预览 :</label>
+        <div class="col-sm-7" style="height: 150px;">
+            <img id="cardfilepathn_img" src="" alt="" style="display: block;padding-left: 15px;width: 30%;height: 90%;">
+            <!--<input type="file" name="member_heaimg" id="member_heaimg">-->
+        </div>
+        <label class="col-sm-3 control-label">身份证反面照片 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <span id="member_cardfilepathf"></span>
+            <input type="hidden" id="hidden_cardfilepathf" name="hidden_cardfilepathf" value="">
+            <!--<input type="file" name="member_cardfilepathf" id="member_cardfilepathf">-->
+        </div>
+        <label class="col-sm-3 control-label">身份证反面照预览 :</label>
+        <div class="col-sm-7" style="height: 150px;">
+            <img id="cardfilepathf_img" src="" alt="" style="display: block;padding-left: 15px;width: 30%;height: 90%;">
+            <!--<input type="file" name="member_heaimg" id="member_heaimg">-->
+        </div>
+        <label class="col-sm-3 control-label">是否已实名认证 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <select name="member_isrealnameauth" id="member_isrealnameauth">
+                <option value="0">未认证</option>
+                <option value="1">认证通过</option>
+                <option value="2">认证失败</option>
+            </select>
+        </div>
+        <label class="col-sm-3 control-label">保证金 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <input type="text" name="member_deposit" id="member_deposit">
+        </div>
+        <label class="col-sm-3 control-label">总计可用贷款额度 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <input type="text" name="member_loanlimit" id="member_loanlimit">
+        </div>
+        <label class="col-sm-2 control-label" style="float: left;margin-left: 7%;">性别：</label>
+        <div class="radio radio-info radio-inline" style="float: left">
+            <input type="radio" id="member_gender1" value="1" checked="checked" name="member_gender">
+            <label for="member_gender1"> 男 </label>
+        </div>
+        <div class="radio radio-inline" style="float: left">
+            <input type="radio" id="member_gender2" value="0" name="member_gender">
+            <label for="member_gender2"> 女 </label>
+        </div>
+        <br style="clear: both"/>
+        <label class="col-sm-2 control-label" style="float: left;margin-left: 7%;">状态：</label>
+        <div class="radio radio-info radio-inline" style="float: left">
+            <input type="radio" id="member_status1" value="1" checked="checked" name="member_status">
+            <label for="member_status1"> 开 </label>
+        </div>
+        <div class="radio radio-inline" style="float: left">
+            <input type="radio" id="member_status2" value="0" name="member_status">
+            <label for="member_status2"> 关 </label>
+        </div>
+        <br style="clear: both"/>
+        <label class="col-sm-2 control-label" style="float: left;margin-left: 7%;">是否可以出价：</label>
+        <div class="radio radio-info radio-inline" style="float: left">
+            <input type="radio" id="member_isbid1" value="1" checked="checked" name="member_isbid">
+            <label for="member_isbid1"> 开 </label>
+        </div>
+        <div class="radio radio-inline" style="float: left">
+            <input type="radio" id="member_isbid2" value="0" name="member_isbid">
+            <label for="member_isbid2"> 关 </label>
+        </div>
+    </div>
+</form>
+<div id = 'showCard' style="display: none">
+    <div>
+        <span>手持身份证照片：</span>
+        <img src="" alt="" id="showCard_h" style="display: block;padding-left: 15px;width: 60%;">
+    </div>
+    <hr/>
+    <div>
+        <span>身份证正面照片：</span>
+        <img src="" alt="" id="showCard_n" style="display: block;padding-left: 15px;width: 60%">
+    </div>
+    <hr/>
+    <div>
+        <span>身份证反面照片：</span>
+        <img src="" alt="" id="showCard_f" style="display: block;padding-left: 15px;width: 60%">
+    </div>
+</div>
+<include file="Public/common_footer"/>
+<include file="UserInfo/index_js"/>
+
+</body>
+
+</html>

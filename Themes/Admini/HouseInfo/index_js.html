@@ -1,0 +1,710 @@
+<script type="text/javascript">
+    var _UPLOADS_ = '__UPLOADS__';
+
+    function initTable() {
+        //先销毁表格
+        $('#houseInfolistTable').bootstrapTable('destroy');
+        //初始化表格,动态从服务器加载数据
+        $("#houseInfolistTable").bootstrapTable({
+            url: '{:U("HouseInfo/getHouseInfoAjax")}', //获取数据的Servlet地址
+            striped: true,  //表格显示条纹
+            pagination: true, //启动分页
+            sortName: 'id',
+            pageSize: 15,  //每页显示的记录数
+            pageNumber:1, //当前第几页
+            pageList: [10, 15, 20, 25],  //记录数可选列表
+            search: false,
+            toolbar: '#list_search',
+            showColumns: true,  //显示下拉框勾选要显示的列
+            showRefresh: true,  //显示刷新按钮
+            sidePagination: "server", //表示服务端请求
+            //设置为undefined可以获取pageNumber，pageSize，searchText，sortName，sortOrder
+            //设置为limit可以获取limit, offset, search, sort, order
+            responseHandler:function(res){
+                //远程数据加载之前,处理程序响应数据格式,对象包含的参数: 我们可以对返回的数据格式进行处理
+                //在ajax后我们可以在这里进行一些事件的处理
+                return res.data;
+            },
+            queryParamsType : "undefined",
+            queryParams: function queryParams(params) {   //设置查询参数
+                var param = {
+                    //这里是在ajax发送请求的时候设置一些参数 params有什么东西，自己看看源码就知道了
+                    pageNumber: params.pageNumber,
+                    pageSize: params.pageSize,
+                    sortName: params.sortName,
+                    sortOrder: params.sortOrder,
+                    find_title_hun : $('#find_title_hun').val(),
+                    find_title : $('#find_title').val(),
+                    find_status : $('#find_status').val(),
+                    find_is_sale : $('#find_is_sale').val()
+                };
+                return param;
+            },
+            onLoadSuccess: function(data){  //加载成功时执行
+            },
+            onLoadError: function(){  //加载失败时执行
+                layer.msg("加载数据失败", {time : 1500, icon : 2});
+            },
+            columns: [
+                {
+                    title: 'ID',
+                    field: 'id',
+                    align: 'center',
+                    sortable: true,
+                    valign: 'middle'
+                },
+                {
+                    field: 'coder',
+                    title: '唯一编码',
+                    align: 'left'
+                },
+                {
+                    field: 'title',
+                    title: '标题(zh)',
+                    align: 'left'
+                },
+                {
+                    field: 'title_hun',
+                    title: '标题(hun)',
+                    align: 'left'
+                },
+                {
+                    field: 'price',
+                    title: '价格',
+                    sortable: true,
+                    align: 'left'
+                },
+                {
+                    field: 'address',
+                    title: '地址(zh)',
+                    align: 'left'
+                },
+                {
+                    field: 'address_hun',
+                    title: '地址(hun)',
+                    align: 'left'
+                },
+                {
+                    field: 'is_lift',
+                    title: '有无电梯',
+                    sortable: true,
+                    formatter: function(value,row,index){
+                        if(value == 1 ){
+                            return '有电梯';
+                        }else if(value == 2){
+                            return '无电梯';
+                        }else {
+                            return '未知';
+                        }
+                    }
+                },
+                {
+                    field: 'is_sale',
+                    title: '售卖/出租',
+                    sortable: true,
+                    formatter: function(value,row,index){
+                        if(value == 1 ){
+                            return '售卖';
+                        }else if(value == 2){
+                            return '出租';
+                        }else {
+                            return '未知';
+                        }
+                    }
+                },
+                {
+                    field: 'proportion',
+                    title: '房屋面积',
+                    align: 'left',
+                },
+                {
+                    field: 'garden_area',
+                    title: '花园面积',
+                    align: 'left',
+                },
+                {
+                    field: 'garage_area',
+                    title: '车库面积',
+                    align: 'left',
+                },
+                {
+                    field: 'num',
+                    title: '房屋数目',
+                    align: 'left',
+                },
+                {
+                    field: 'wc_num',
+                    title: '卫生间数目',
+                    align: 'left',
+                },
+                {
+                    field: 'floor_num',
+                    title: '所在楼层',
+                    align: 'left',
+                },
+                {
+                    field: 'build_type',
+                    title: '建筑类型',
+                    align: 'left',
+                },
+                {
+                    field: 'city_name',
+                    title: '区域(zh)',
+                    align: 'left',
+                },
+                {
+                    field: 'city_name_hun',
+                    title: '区域(hun)',
+                    align: 'left',
+                },
+                {
+                    field: 'is_floor_heat',
+                    title: '地暖',
+                    align: 'left',
+                    formatter: function(value,row,index){
+                        if(value==1){
+                            return '有地暖';
+                        }else if(value==2){
+                            return '无地暖';
+                        }
+                    }
+                },
+                {
+                    field: 'is_dulilinyu',
+                    title: '独立卫浴',
+                    align: 'left',
+                    formatter: function(value,row,index){
+                        if(value==1){
+                            return '有独立卫浴';
+                        }else if(value==2){
+                            return '无独立卫浴';
+                        }else {
+                            return '未知';
+                        }
+                    }
+                },
+                {
+                    field: 'creat_house_time',
+                    title: '房屋建造时间',
+                    sortable: true,
+                    align: 'left',
+                    formatter: function(value,row,index){
+                        if (value) {
+                            var value_time = parseInt(value);
+                            var time = new Date(value_time * 1000);
+                            var ymdhis = "";
+                            ymdhis += time.getUTCFullYear() + "-";
+                            ymdhis += (time.getUTCMonth() + 1) + "-";
+                            ymdhis += time.getUTCDate();
+
+                            ymdhis += " " + time.getUTCHours() + ":";
+                            ymdhis += time.getUTCMinutes() + ":";
+                            ymdhis += time.getUTCSeconds();
+
+                            return ymdhis;
+                        }
+                    }
+                },
+                {
+                    field: 'addtime',
+                    title: '添加时间',
+                    sortable: true,
+                    align: 'left',
+                    formatter: function(value,row,index){
+                        if (value) {
+                            var value_time = parseInt(value);
+                            var time = new Date(value_time * 1000);
+                            var ymdhis = "";
+                            ymdhis += time.getUTCFullYear() + "-";
+                            ymdhis += (time.getUTCMonth() + 1) + "-";
+                            ymdhis += time.getUTCDate();
+
+                            ymdhis += " " + time.getUTCHours() + ":";
+                            ymdhis += time.getUTCMinutes() + ":";
+                            ymdhis += time.getUTCSeconds();
+
+                            return ymdhis;
+                        }
+                    }
+                },
+                {
+                    field: 'status',
+                    title: '状态',
+                    sortable: true,
+                    align: 'center',
+                    formatter: function(value,row,index){
+                        <if condition="check_auth(154) eq 1">
+                            if(value==1){
+                                var a = '<span class="btn btn-info btn-circle btn-sm"> <i class="fa fa-check" data_id="'+row.id+'" data_status="'+row.status+'" onclick="updeteStatus(this);"></i> </span>';
+                            }else {
+                                var a = '<span class="btn btn-warning btn-circle btn-xs"> <i class="fa fa-close" data_id="'+row.id+'" data_status="'+row.status+'" onclick="updeteStatus(this);"></i> </span>';
+                            }
+                        <else />
+                        if(value==1){
+                            var a = '<span class="btn btn-info btn-circle btn-sm"> <i class="fa fa-check"  ></i> </span>';
+                        }else {
+                            var a = '<span class="btn btn-warning btn-circle btn-xs"> <i class="fa fa-close" ></i> </span>';
+                        }
+                        </if>
+                        return a;
+                    }
+                },{
+                    field: 'operate',
+                    title: '操作',
+                    align: 'center',
+                    formatter: function(value,row,index){
+                        var e = '';
+                        var d = '';
+                        var f = '';
+                        <if condition="check_auth(158) eq 1">
+                        f = '<a  onclick="lookImg(this)" data_id = "'+row.id+'">查看图册</a> ';
+                        </if>
+                        <if condition="check_auth(157) eq 1">
+                        e = '<a href="#" mce_href="#" data_from="editUserInfo" data_id="'+row.id+'"  onclick="edit(this)" >编辑</a> '  ;
+                        </if>
+                        <if condition="check_auth(155) eq 1">
+                        d = '<a href="#" mce_href="#" onclick="del('+row.id+')">删除</a> ';
+                        </if>
+                        return e+f+d;
+                    }
+                }
+            ]
+        });
+    }
+
+    /**
+     * 查看房屋图册
+     * */
+    function lookImg(obj){
+        var id = $(obj).attr('data_id');
+        $.ajax({
+            method: "post",
+            url: '{:U("HouseInfo/lookImg")}',
+            data:{ 'id':id},
+            dataType: 'JSON',
+            success: function(data){
+                if(data.code == 200){
+                    $('#showImg').empty();
+                    $.each(data.data,function (value,obj) {
+                        $('#showImg').append("<img src='/"+obj.filepath+"'>");
+                    });
+
+                    layer.open({
+                        type: 1,
+                        title: '房源图册',
+                        shadeClose: true,
+                        shade: 0.8,
+                        area: ['70%', '65%'],
+                        content: $('#showImg'),
+                        btn: ['确定'] // 按钮
+                    });
+                }else {
+                    layer.msg(data.msg);
+                }
+
+            },
+            error: function(){
+                layer.msg('请填写昵称！');
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        //调用函数，初始化表格
+        initTable();
+        //当点击查询按钮的时候执行
+        $("#search").bind("click", initTable);
+        uploadFilepath();
+    });
+    //搜索
+    function p_search() {
+        $("#houseInfolistTable").bootstrapTable('refresh');
+    }
+
+    /**
+     * 上传房源图片
+     * */
+    function uploadFilepath() {
+        var uploadUrl = '{:U("HouseInfo/uploadImg")}';
+        $('#filepath').Huploadify({
+            'auto':true,
+            'fileTypeExts':'*.jpg;*.png;*.jpeg',
+            'buttonText':'选择文件[仅支持jpg，png，jpeg]',
+            'multi':true,
+            'formData':{key:'info',action:'upload'},
+            'queueSizeLimit' : 10,
+            'fileSizeLimit':4096,
+            'showUploadedPercent':true,//是否实时显示上传的百分比，如20%
+            'showUploadedSize':true,
+            'removeTimeout':15,
+            'uploader':uploadUrl,
+            onUploadComplete:function(file,responseText){
+                var data = jQuery.parseJSON(responseText);
+                if(data.code == 200){
+                    $('#hidden_filepath_div').prepend("<img  src='/"+data.src+"' style='width: 100px;height: 100px;'>");
+                    $('#hidden_filepath_div').prepend("<input type='hidden' style='width: 100px;height: 80px;' name='img[]' value = '"+data.src+"' >");
+                }else {
+                    layer.msg(data.msg);
+                }
+            }
+        });
+
+    }
+    /**
+     * 编辑详细信息
+     * */
+    function edit(obj){
+        var id = $(obj).attr('data_id');
+        var from = $(obj).attr('data_from');
+        $.ajax({
+            method: "post",
+            url: '{:U("HouseInfo/updateHouseInfo")}',
+            data:{ 'id':id},
+            dataType: 'JSON',
+            success: function(data){
+                if (data.code == 200) {
+                    $('#edit_title').val(data.data.info.title);
+                    $('#edit_title_hun').val(data.data.info.title_hun);
+//                    $('#edit_status').val(data.data.info.status);
+                    $('#edit_proportion').val(data.data.info.proportion);
+                    $('#edit_price').val(data.data.info.price);
+                    $('#edit_num').val(data.data.info.num);
+                    $('#edit_is_lift').val(data.data.info.is_lift);
+                    $('#edit_is_sale').val(data.data.info.is_sale);
+                    $('#edit_address').val(data.data.info.address);
+                    $('#edit_address_hun').val(data.data.info.address_hun);
+                    $('#edit_area_id').val(data.data.info.area_id);
+                    $('#edit_garden_area').val(data.data.info.garden_area);
+                    $('#edit_floor_num').val(data.data.info.floor_num);
+                    $('#edit_build_type').val(data.data.info.build_type);
+                    $('#edit_wc_num').val(data.data.info.wc_num);
+                    $('#edit_garage_area').val(data.data.info.garage_area);
+                    $('#edit_memo').text(data.data.info.memo);
+                    $('#edit_creat_house_time').val(data.data.info.creat_house_time);
+
+                    if(data.data.info.status==1){
+                        $('#edit_status1').prop('checked','checked');
+                        $('#edit_status2').prop('checked','');
+                    }else {
+                        $('#edit_status1').prop('checked','');
+                        $('#edit_status2').prop('checked','checked');
+                    }
+                    if(data.data.info.is_floor_heat==1){
+                        $('#edit_is_floor_heat1').prop('checked','checked');
+                        $('#edit_is_floor_heat2').prop('checked','');
+                    }else {
+                        $('#edit_is_floor_heat1').prop('checked','');
+                        $('#edit_is_floor_heat2').prop('checked','checked');
+                    }
+                    if(data.data.info.is_dulilinyu==1){
+                        $('#edit_is_dulilinyu1').prop('checked','checked');
+                        $('#edit_is_dulilinyu2').prop('checked','');
+                    }else {
+                        $('#edit_is_dulilinyu1').prop('checked','');
+                        $('#edit_is_dulilinyu2').prop('checked','checked');
+                    }
+                        <if condition="check_auth(153) eq 1">
+                        $.each(data.data.photo_list,function (value,obj) {
+                            if(obj.filepath!=''){
+                                $('#hidden_filepath_div').append("<img style='width: 25%' onclick='delImg(this)' src='/"+obj.filepath+"' data_id = '"+obj.id+"'>");
+                            }
+                        });
+
+                        <else/>
+                    $.each(data.data.photo_list,function (value,obj) {
+                        $('#showImg').append("<img src='/"+obj.photo_list.filepath+"'>");
+                    });
+
+                        </if>
+
+                } else {
+                    layer.msg(data.msg);
+                }
+            },
+            error:function(){
+                layer.msg('数据错误！');
+            }
+        });
+        layer.open({
+            type: 1,
+            title: '编辑',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['75%', '70%'],
+            content: $('#'+from),
+            btn: ['确定', '取消'], // 按钮
+            yes: function(index, layero){
+                var from_data = $('#'+from).toJson();
+                if(from_data.edit_title == ''){
+                    layer.msg('请填写标题(zh)！');
+                    return false;
+                }
+                if(from_data.edit_title == ''){
+                    layer.msg('请填写标题(hun)！');
+                    return false;
+                }
+                if(from_data.edit_price == ''){
+                    layer.msg('请填写价格！');
+                    return false;
+                }
+                if(from_data.edit_address == ''){
+                    layer.msg('请填写地址(zh)！');
+                    return false;
+                }
+                if(from_data.edit_address_hun == ''){
+                    layer.msg('请填写地址(hun)！');
+                    return false;
+                }
+                if(from_data.edit_proportion == ''){
+                    layer.msg('请填写房屋面积！');
+                    return false;
+                }
+                if(from_data.edit_num == ''){
+                    layer.msg('请填写房屋数量！');
+                    return false;
+                }
+                if(from_data.edit_wc_num == ''){
+                    layer.msg('请填写卫生间数量！');
+                    return false;
+                }
+                if(from_data.edit_garden_area == ''){
+                    layer.msg('请填写花园面积！');
+                    return false;
+                }
+                if(from_data.edit_floor_num == ''){
+                    layer.msg('请填写所在楼层！');
+                    return false;
+                }
+                if(from_data.edit_build_type == ''){
+                    layer.msg('请填写建筑类型！');
+                    return false;
+                }
+                if(from_data.edit_garage_area == ''){
+                    layer.msg('请填写车库面积！');
+                    return false;
+                }
+                if(from_data.edit_creat_house_time == ''){
+                    layer.msg('请填写房屋建筑时间！');
+                    return false;
+                }
+
+
+                layer.msg('确定编辑？', {
+                    time: 0 //不自动关闭
+                    ,btn: ['确定', '取消']
+                    ,yes: function(index){
+                        $.ajax({
+                            method: "post",
+                            url: '{:U("HouseInfo/updateHouseInfo")}',
+                            data:{
+                                'id':id,
+                                'submit':'yes',
+                                'from' : $('#'+from).toJson()
+                            },
+                            dataType: 'JSON',
+                            success: function(data){
+                                if (data.code == 200) {
+                                    $("#houseInfolistTable").bootstrapTable('refresh');
+                                    layer.close(index);
+                                    layer.closeAll();
+                                    layer.msg(data.msg);
+                                } else {
+                                    layer.msg(data.msg);
+                                }
+                            },
+                            error:function(){
+                                layer.msg('数据错误！');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+
+    /**
+     * 修改状态
+     * */
+    function updeteStatus(obj){
+        var id = $(obj).attr('data_id');
+        var status = $(obj).attr('data_status');
+
+        layer.confirm("确定修改？",function () {
+            $.ajax({
+                method: "post",
+                url: '{:U("HouseInfo/editHouseStatus")}',
+                data:{ 'id':id, 'status' : status },
+                dataType: 'JSON',
+                success: function(data){
+                    if (data.code == 200) {
+                        $("#houseInfolistTable").bootstrapTable('refresh');
+                        layer.msg(data.msg);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                },
+                error:function(){
+                    layer.msg('数据错误！');
+                }
+            });
+        });
+    }
+
+
+
+
+    /**
+     * 添加用户
+     * */
+    function addUser(obj){
+        $('#edit_title').val('');
+        $('#edit_title_hun').val();
+        $('#edit_price').val('');
+        $('#edit_address').val('');
+        $('#edit_address_hun').val('');
+        $('#edit_proportion').val('');
+        $('#edit_num').val('');
+        $('#hidden_filepath_div').empty();
+//        $('#member_cardnumber').val('');
+        var from = $(obj).attr('data_from');
+        layer.open({
+            type: 1,
+            title: '添加',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['70%', '65%'],
+            content: $('#'+from),
+            btn: ['确定', '取消'], // 按钮
+            yes: function(index, layero){
+                var from_data = $('#'+from).toJson();
+
+                if(from_data.edit_title == ''){
+                    layer.msg('请填写标题(zh)！');
+                    return false;
+                }
+                if(from_data.edit_title == ''){
+                    layer.msg('请填写标题(hun)！');
+                    return false;
+                }
+                if(from_data.edit_price == ''){
+                    layer.msg('请填写价格！');
+                    return false;
+                }
+                if(from_data.edit_address == ''){
+                    layer.msg('请填写地址(zh)！');
+                    return false;
+                }
+                if(from_data.edit_address_hun == ''){
+                    layer.msg('请填写地址(hun)！');
+                    return false;
+                }
+                if(from_data.edit_proportion == ''){
+                    layer.msg('请填写面积！');
+                    return false;
+                }
+                if(from_data.edit_num == ''){
+                    layer.msg('请填写房屋数量！');
+                    return false;
+                }
+                layer.msg('确定添加？', {
+                    time: 0 //不自动关闭
+                    ,btn: ['确定', '取消']
+                    ,yes: function(index){
+                        $.ajax({
+                            method: "post",
+                            url: '{:U("HouseInfo/add")}',
+                            data:{ 'submit':'submit', 'from' : $('#'+from).toJson() },
+                            dataType: 'JSON',
+                            success: function(data){
+                                if (data.code == 200) {
+                                    $("#houseInfolistTable").bootstrapTable('refresh');
+                                    layer.close(index);
+                                    layer.closeAll();
+                                    layer.msg('添加成功!');
+                                } else {
+                                    layer.msg(data.msg);
+                                }
+                            },
+                            error:function(){
+                                layer.msg('数据错误！');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+    /**
+     * 删除用户
+     * */
+    function del(id){
+        layer.msg('确定删除？', {
+            time: 0 //不自动关闭
+            ,btn: ['确定', '取消']
+            ,yes: function(index){
+                $.ajax({
+                    method: "post",
+                    url: '{:U("HouseInfo/delete")}',
+                    data:{'id':id},
+                    dataType: 'JSON',
+                    success: function(data){
+                        if (data.code == 200) {
+                            $("#houseInfolistTable").bootstrapTable('refresh');
+//                            $("#houseInfolistTable").bootstrapTable('remove',{
+//                                field: 'id',
+//                                values: id
+//                            });
+                            layer.msg('删除成功!');
+                        } else {
+                            layer.msg('删除失败!');
+                        }
+                    },
+                    error:function(){
+                        layer.msg('数据错误！');
+                    }
+                });
+            }
+        });
+    }
+
+    /**
+     * 同一选择的区域
+     * */
+    function zhTohunArea(obj){
+        $('#edit_area_new_hun').val($(obj).val());
+    }
+
+    function hunTozhArea(obj){
+        $('#edit_area_new').val($(obj).val());
+    }
+
+    /**
+     * 删除单个图片
+     * */
+    function delImg(obj){
+        var id = $(obj).attr('data_id');
+        layer.confirm("确定删除图片？",function () {
+            $.ajax({
+                method: "post",
+                url: '{:U("HouseInfo/delImg")}',
+                data:{ 'id':id},
+                dataType: 'JSON',
+                success: function(data){
+                    if (data.code == 200) {
+                        $(obj).remove();
+                        layer.msg(data.msg);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                },
+                error:function(){
+                    layer.msg('数据错误！');
+                }
+            });
+        });
+    }
+
+
+</script>

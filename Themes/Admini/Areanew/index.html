@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/common_header" />
+    <link href="__CSS__/admin/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="__CSS__/admin/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    .bgcolor{background:#F2F2F2;}
+</style>
+<!-- Panel Other -->
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>地区列表</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-sm-12">
+                <!-- Example Toolbar -->
+                <div class="example-wrap">
+                    <div class="example">
+                        <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+                            <if condition="check_auth(150) eq 1">
+                                <a class="glyphicon glyphicon-plus" style="curosr: pointer;font-size: 20px" href="{:U('AreaNew/add')}">添加</a>
+                            </if>
+                        </div>
+                        <table id="exampleTableToolbar" data-mobile-responsive="false">
+                            <thead>
+                            <tr>
+                                <th data-field="id">标识ID</th>
+                                <th data-field="city_name">名称(zh)</th>
+                                <th data-field="city_name_hun">名称(hun)</th>
+                                <!--  <th data-field="name">模型动作</th>-->
+                                <th data-field="sort">排序</th>
+                                <th data-field="status">状态</th>
+                                <th data-field="actions">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="articleCateList" id="aclist">
+                                <tr title="{$aclist.cate_id}" class="bgcolor">
+                                    <td>{$aclist.id}</td>
+                                    <td>{$aclist.city_name}</td>
+                                    <td>{$aclist.city_name_hun}</td>
+                                    <!-- <td>{$aclist.name}</td>-->
+                                    <td>{$aclist.sort}</td>
+                                    <td id="btnstatus">
+                                        <if condition="$aclist.status eq 1">
+                                            <span class="btn btn-info btn-circle btn-sm"> <i class="fa fa-check"></i> </span>
+                                            <else />
+                                            <span class="btn btn-warning btn-circle btn-xs"> <i class="fa fa-close"></i> </span>
+                                        </if>
+                                    </td>
+                                    <td>
+                                        <if condition="check_auth(151) eq 1">
+                                            <a href='{:U("AreaNew/update",array("id"=>$aclist["id"]))}'>编辑</a>
+                                        </if>
+                                        <if condition="check_auth(149) eq 1">
+                                            <a href="#" data_name="{$aclist.cate_name}" data_id = "{$aclist.id}" onclick="del(this)">删除</a>
+                                        </if>
+                                    </td>
+                                </tr>
+
+                            </volist>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Example Toolbar -->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/common_footer" />
+<script src="__JS__/admin/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="__JS__/admin/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="__JS__/admin/demo/bootstrap-table-demo.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+    })
+    function del(obj) {
+        layer.confirm("确定删除？",function () {
+            var id = $(obj).attr('data_id');
+            var del_id = new Array();
+            del_id[0] = id;
+            $.ajax({
+                method: "post",
+                url: '{:U("AreaNew/delete")}',
+                data:{ 'id':id, 'status' : status },
+                dataType: 'JSON',
+                success: function(data){
+                    if (data.code == 200) {
+                        $("#exampleTableToolbar").bootstrapTable('remove',{
+                            field:'id',
+                            values: del_id
+                        });
+                        layer.msg(data.msg);
+                    } else {
+                        layer.msg(data.msg);
+                    }
+                },
+                error:function(){
+                    layer.msg('数据错误！');
+                }
+            });
+        });
+
+    }
+</script>
+</body>
+</html>

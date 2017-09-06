@@ -1,0 +1,1524 @@
+[ 2017-09-06T10:31:45+08:00 ] 127.0.0.1 /home/index/sendMail
+ERR: Invalid address:  (setFrom) sender
+
+[ 2017-09-06T10:32:00+08:00 ] 127.0.0.1 /home/index/sendMail
+ERR: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+
+[ 2017-09-06T10:32:47+08:00 ] 127.0.0.1 /home/index/sendMail
+ERR: The following From address failed: sender@163.com : MAIL FROM command failed,Mail from must equal authorized user
+,553,SMTP server error: MAIL FROM command failed Detail: Mail from must equal authorized user
+ SMTP code: 553
+
+[ 2017-09-06T10:35:24+08:00 ] 127.0.0.1 /home/index/sendMail
+ERR: The following From address failed: csk_shank@163.com : MAIL FROM command failed,Mail from must equal authorized user
+,553,SMTP server error: MAIL FROM command failed Detail: Mail from must equal authorized user
+ SMTP code: 553
+
+[ 2017-09-06T10:51:10+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002044s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000891s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2017-09-06T10:51:11+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002599s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.room_num = 'any' AND city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0148s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.room_num = 'any' AND city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000789s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2017-09-06T10:53:28+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002188s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-09-06T10:53:28+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001716s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.room_num = 'any' AND city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.room_num = 'any' AND city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2017-09-06T11:21:35+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001383s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-09-06T11:22:10+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001801s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005689s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002980s ]
+
+[ 2017-09-06T11:22:38+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001240s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2017-09-06T11:22:46+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2017-09-06T11:22:52+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-09-06T11:24:47+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2017-09-06T11:28:08+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002637s ]
+
+[ 2017-09-06T11:32:00+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001682s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006888s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005673s ]
+
+[ 2017-09-06T11:32:32+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005286s ]
+
+[ 2017-09-06T11:35:26+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001329s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004962s ]
+
+[ 2017-09-06T11:36:18+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003776s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2017-09-06T11:36:36+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017457s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2017-09-06T11:36:57+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001625s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001642s ]
+
+[ 2017-09-06T11:37:10+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2017-09-06T11:37:28+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001720s ]
+
+[ 2017-09-06T11:37:42+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-09-06T11:47:40+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002271s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002482s ]
+
+[ 2017-09-06T11:48:13+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001289s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2017-09-06T11:48:34+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001276s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007691s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001010s ]
+
+[ 2017-09-06T11:49:42+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003247s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003667s ]
+
+[ 2017-09-06T11:50:02+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001745s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2017-09-06T11:51:00+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005598s ]
+
+[ 2017-09-06T12:01:09+08:00 ] 127.0.0.1 /home/index/getMail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001280s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002584s ]
+
+[ 2017-09-06T13:35:40+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002841s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2017-09-06T13:35:44+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001818s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001272s ]
+
+[ 2017-09-06T13:36:10+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002920s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001203s ]
+
+[ 2017-09-06T13:51:36+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2017-09-06T13:51:38+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002547s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2017-09-06T13:51:47+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001494s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2017-09-06T14:01:08+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002002s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-09-06T14:05:31+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001980s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2017-09-06T14:05:58+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001921s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2017-09-06T14:06:13+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002467s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001044s ]
+
+[ 2017-09-06T14:07:28+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001420s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2017-09-06T14:08:57+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001441s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-09-06T14:09:01+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001619s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-09-06T14:09:06+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-09-06T14:09:41+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001370s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-09-06T14:09:46+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002721s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2017-09-06T14:09:49+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001379s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2017-09-06T14:11:31+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001760s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-09-06T14:17:16+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001793s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000980s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2017-09-06T14:17:21+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-09-06T14:17:26+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-09-06T14:17:58+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002080s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000982s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2017-09-06T14:18:04+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001443s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000986s ]
+
+[ 2017-09-06T14:18:18+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001557s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2017-09-06T14:18:24+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004656s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001070s ]
+
+[ 2017-09-06T14:18:59+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001560s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2017-09-06T14:19:05+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002518s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000970s ]
+
+[ 2017-09-06T14:20:39+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002536s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001524s ]
+
+[ 2017-09-06T14:31:14+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-09-06T14:41:39+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-09-06T14:41:46+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001388s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-09-06T14:42:13+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001389s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-09-06T14:53:08+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002416s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2017-09-06T14:53:08+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001643s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001015s ]
+
+[ 2017-09-06T14:54:44+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002282s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-09-06T14:54:49+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001425s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2017-09-06T14:54:49+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002598s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001758s ]
+
+[ 2017-09-06T14:54:54+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002368s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2017-09-06T14:54:54+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002606s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001147s ]
+
+[ 2017-09-06T14:54:59+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002899s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001051s ]
+
+[ 2017-09-06T14:54:59+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002042s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000986s ]
+
+[ 2017-09-06T14:57:26+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003787s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2017-09-06T14:57:26+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002658s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2017-09-06T14:57:44+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002329s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-09-06T14:57:44+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001611s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004567s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001466s ]
+
+[ 2017-09-06T14:57:50+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009851s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001774s ]
+
+[ 2017-09-06T14:57:50+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002785s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0049s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001304s ]
+
+[ 2017-09-06T14:57:57+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2017-09-06T14:57:57+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003197s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2017-09-06T14:59:21+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002283s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2017-09-06T14:59:21+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003025s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
+
+[ 2017-09-06T14:59:26+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002053s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2017-09-06T14:59:26+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002156s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2017-09-06T14:59:31+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002965s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2017-09-06T14:59:31+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001006s ]
+
+[ 2017-09-06T14:59:36+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002938s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2017-09-06T14:59:36+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002517s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2017-09-06T14:59:46+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001812s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2017-09-06T14:59:46+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002387s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000932s ]
+
+[ 2017-09-06T14:59:52+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003355s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005029s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-09-06T14:59:52+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004289s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001958s ]
+
+[ 2017-09-06T15:00:32+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003592s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-09-06T15:00:32+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003091s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-09-06T15:00:36+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-09-06T15:00:36+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002253s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001100s ]
+
+[ 2017-09-06T15:00:45+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002488s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-09-06T15:00:45+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002007s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2017-09-06T15:03:06+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002615s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2017-09-06T15:03:06+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003351s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001211s ]
+
+[ 2017-09-06T15:03:09+08:00 ] 127.0.0.1 /home/index/shawn.think/home/index/lists?form=index&l=zh-CN
+ERR: 非法操作:shawn.think
+
+[ 2017-09-06T15:03:29+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005060s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2017-09-06T15:03:29+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001899s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001255s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001455s ]
+
+[ 2017-09-06T15:03:35+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002170s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001225s ]
+
+[ 2017-09-06T15:03:35+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002487s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2017-09-06T15:03:39+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002593s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2017-09-06T15:03:39+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003260s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2017-09-06T15:03:44+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002707s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2017-09-06T15:03:44+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002317s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-09-06T15:04:03+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004318s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003427s ]
+
+[ 2017-09-06T15:04:35+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001558s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001432s ]
+
+[ 2017-09-06T15:23:40+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2017-09-06T15:24:47+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002216s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000785s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002664s ]
+
+[ 2017-09-06T15:25:16+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001436s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-09-06T15:25:33+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001454s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-09-06T15:25:58+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002417s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2017-09-06T15:26:40+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001411s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-09-06T15:27:20+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001785s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001212s ]
+
+[ 2017-09-06T15:27:55+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002720s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2017-09-06T15:28:01+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-09-06T15:28:14+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002881s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001189s ]
+
+[ 2017-09-06T15:28:17+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002135s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2017-09-06T15:28:21+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2017-09-06T15:43:25+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002024s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2017-09-06T15:44:31+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001629s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002270s ]
+
+[ 2017-09-06T15:45:27+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001859s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001640s ]
+
+[ 2017-09-06T15:46:21+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001634s ]
+
+[ 2017-09-06T15:59:10+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003075s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0392s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001945s ]
+
+[ 2017-09-06T16:11:30+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002965s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001213s ]
+
+[ 2017-09-06T16:15:18+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002936s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001326s ]
+
+[ 2017-09-06T16:15:22+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001721s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2017-09-06T16:15:22+08:00 ] 127.0.0.1 /home/index/getList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002285s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004484s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `city_house_info` WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 LIMIT 1   [ RunTime:0.0119s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,1   [ RunTime:0.0189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001070s ]
+
+[ 2017-09-06T16:15:31+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001460s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2017-09-06T16:15:41+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003186s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003482s ]
+
+[ 2017-09-06T16:27:36+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001588s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2017-09-06T16:30:10+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003507s ]
+SQL: SHOW COLUMNS FROM `city_house_info` [ RunTime:0.0079s ]
+SQL: SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` left join city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.status = 1 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT 0,6   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000407s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001146s ]
+
+[ 2017-09-06T16:30:13+08:00 ] 127.0.0.1 /home/index/getAreaList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003390s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009322s ]
+SQL: SHOW COLUMNS FROM `city_area_new` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `city_area_new` WHERE `status` = 1  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001635s ]
+
+[ 2017-09-06T16:33:25+08:00 ] 127.0.0.1 /home/index/errors
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002517s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005551s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001416s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+
+[ 2017-09-06T16:43:31+08:00 ] 127.0.0.1 /home/index/a
+ERR: 非法操作:a
+
+[ 2017-09-06T16:43:44+08:00 ] 127.0.0.1 /home/index/single-property.html
+ERR: 非法操作:single-property
+
+[ 2017-09-06T16:43:54+08:00 ] 127.0.0.1 /home/index/single-property.html
+ERR: 非法操作:single-property
+
+[ 2017-09-06T16:55:14+08:00 ] 127.0.0.1 /home/index/single-property.html
+ERR: 非法操作:single-property
+
+[ 2017-09-06T16:56:12+08:00 ] 127.0.0.1 /home/index/single-property.html
+ERR: 非法操作:single-property
+
+[ 2017-09-06T20:33:31+08:00 ] 127.0.0.1 /home/index/getList
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-7,9' at line 1
+ [ SQL语句 ] : SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT -7,9  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-7,9' at line 1
+ [ SQL语句 ] : SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT -7,9  
+
+[ 2017-09-06T20:33:33+08:00 ] 127.0.0.1 /home/index/getList
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-7,9' at line 1
+ [ SQL语句 ] : SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT -7,9  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-7,9' at line 1
+ [ SQL语句 ] : SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT -7,9  
+
+[ 2017-09-06T20:33:35+08:00 ] 127.0.0.1 /home/index/getList
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-7,9' at line 1
+ [ SQL语句 ] : SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT -7,9  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-7,9' at line 1
+ [ SQL语句 ] : SELECT city_house_info.*,city_house_photo.filepath FROM `city_house_info` INNER JOIN city_house_photo ON city_house_info.id = city_house_photo.house_id  WHERE city_house_info.price BETWEEN 0 AND 9999999999 AND city_house_info.proportion BETWEEN 0 AND 999999 GROUP BY city_house_photo.house_id ORDER BY city_house_info.id DESC LIMIT -7,9  
+
+[ 2017-09-06T21:10:38+08:00 ] 127.0.0.1 /home/index/single-property.html
+ERR: 非法操作:single-property
+
+[ 2017-09-06T23:54:03+08:00 ] 127.0.0.1 /home/index/single-property.html
+ERR: 非法操作:single-property
+

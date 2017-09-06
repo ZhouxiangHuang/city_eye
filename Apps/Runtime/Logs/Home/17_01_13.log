@@ -1,0 +1,221 @@
+[ 2017-01-13T13:53:07+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=485-index&spi=null&sun=null&sui=null&spt=%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-13T13:53:17+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=gallery_grid&spi=&sun=null&sui=null&spt=%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE%20&gt;&gt;%20%E4%B8%89%E6%98%9F&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:53:29+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=gallery_grid&spi=&sun=null&sui=null&spt=%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE%20&gt;&gt;%20%E9%97%AA%E8%BF%AA&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:53:50+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=485-goodsdetail&spi=373&sun=null&sui=null&spt=%E9%97%AA%E8%BF%AA(SanDisk)%20%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%E5%8A%A0%E5%BC%BA%E7%89%88%20SDSSDA%20120G%20-%20%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:53:51+08:00 ] 127.0.0.1 /?qzjgo=7%7C2%7C%E9%97%AA%E8%BF%AA(SanDisk)%20%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%20%20%20%E5%8A%A0%E5%BC%BA%E7%89%88%20%20%20%20%20SDSSDA%20%20%20%20%20%20120G%7C373%7C350%7Chttp%3A%2F%2Fwww.hnzhkj.com%2Fimages%2Fgoods%2F20150819%2F670767287e0511c6.jpg&ssi=1680996634&spty=485-goodsdetail&spi=373&sun=null&sui=null&spt=%E9%97%AA%E8%BF%AA(SanDisk)%20%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%E5%8A%A0%E5%BC%BA%E7%89%88%20SDSSDA%20120G%20-%20%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:56:25+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=485-index&spi=null&sun=null&sui=null&spt=%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:56:38+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=gallery_grid&spi=&sun=null&sui=null&spt=I7%20CPU%20&gt;&gt;%20%E9%85%B7%E7%9D%BFi7%E5%9B%9B%E4%BB%A3,%E9%85%B7%E7%9D%BFi7%E4%B8%89%E4%BB%A3,%E9%85%B7%E7%9D%BFi7%E4%BA%8C%E4%BB%A3,%E9%85%B7%E7%9D%BFi7,%E9%85%B7%E7%9D%BFi7%E5%85%AD%E4%BB%A3,%E9%85%B7%E7%9D%BFi7%E4%BA%94%E4%BB%A3&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-13T13:58:18+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=485-goodsdetail&spi=501&sun=null&sui=null&spt=%E8%8B%B1%E7%89%B9%E5%B0%94%EF%BC%88Intel)%E6%95%A3%E7%89%87%20%E9%85%B7%E7%9D%BF%E5%9B%9B%E6%A0%B8%20%E5%8F%B0%E5%BC%8F%E6%9C%BACPU%201151%E9%92%88%20I7-6700K%20-%20CPU%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:58:19+08:00 ] 127.0.0.1 /?qzjgo=20%7C1%7C%E8%8B%B1%E7%89%B9%E5%B0%94%EF%BC%88Intel)%E6%95%A3%E7%89%87%20%E9%85%B7%E7%9D%BF%E5%9B%9B%E6%A0%B8%20%E5%8F%B0%E5%BC%8F%E6%9C%BACPU%201151%E9%92%88%20%20I7-6700K%7C501%7C2399%7Chttp%3A%2F%2Fwww.hnzhkj.com%2Fimages%2Fgoods%2F20160919%2Fcb496ef839d18524.jpg&ssi=1680996634&spty=485-goodsdetail&spi=501&sun=null&sui=null&spt=%E8%8B%B1%E7%89%B9%E5%B0%94%EF%BC%88Intel)%E6%95%A3%E7%89%87%20%E9%85%B7%E7%9D%BF%E5%9B%9B%E6%A0%B8%20%E5%8F%B0%E5%BC%8F%E6%9C%BACPU%201151%E9%92%88%20I7-6700K%20-%20CPU%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-13T13:58:42+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=485-index&spi=null&sun=null&sui=null&spt=%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-13T13:58:47+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=gallery_grid&spi=&sun=null&sui=null&spt=1TB%E6%9C%BA%E6%A2%B0%E7%A1%AC%E7%9B%98&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:59:06+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=gallery_grid&spi=&sun=null&sui=null&spt=%E5%86%85%E5%AD%98%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE%20&gt;&gt;%20%E9%95%81%E5%85%89&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-13T13:59:13+08:00 ] 127.0.0.1 /?&ssi=1680996634&spty=gallery_grid&spi=&sun=null&sui=null&spt=%E5%86%85%E5%AD%98%20%E9%83%91%E5%B7%9E%E8%B5%9E%E7%A6%BE%20&gt;&gt;%20%E9%87%91%E5%A3%AB%E9%A1%BF&sfv=24&sbi=chrome&platform=win&browser=55&ssc=1920x1080&scd=24-bit&sja=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

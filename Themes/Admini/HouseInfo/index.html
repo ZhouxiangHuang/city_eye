@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/common_header"/>
+    <link href="__CSS__/admin/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="__CSS__/admin/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__CSS__/admin/Huploadify.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    .bgcolor {
+        background: #F2F2F2;
+    }
+</style>
+<!-- Panel Other -->
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>房源列表</h5>
+
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="row row-lg">
+            <div class="col-sm-12">
+
+                <!-- Example Toolbar -->
+                <div class="example-wrap">
+                    <div class="example">
+                        <div class="btn-group hidden-xs" id="exampleToolbar" role="group">
+
+                        </div>
+
+                        <table class="table table-hover" id="houseInfolistTable"
+                               data-pagination="true"
+                               data-show-refresh="true"
+                               data-show-toggle="true"
+                               data-showColumns="true">
+                        </table>
+                    </div>
+                </div>
+                <!-- End Example Toolbar -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="">
+    <form id="list_search" class="bs-example bs-example-form">
+        <if condition="check_auth(156) eq 1">
+            <a class="glyphicon glyphicon-plus" style="curosr: pointer;font-size: 20px" data_from="editUserInfo"
+               onclick="addUser(this);">添加</a>
+        </if>
+        <div class="input-group " style="width: 15%;float: left;margin-right: 1%">
+            <span class="input-group-addon">标题(zh)</span>
+            <input type="text" class=" form-control" id="find_title">
+        </div>
+        <div class="input-group " style="width: 17%;float: left;margin-right: 1%">
+            <span class="input-group-addon">标题(hun)</span>
+            <input type="text" class=" form-control" id="find_title_hun">
+        </div>
+        <div class="input-group " style="width: 15%;float: left;margin-right: 1%">
+            <span class="input-group-addon">状态</span>
+            <select name="" id="find_status" class=" form-control">
+                <option value="0">全部</option>
+                <option value="1">正常</option>
+                <option value="2">禁用</option>
+            </select>
+        </div>
+        <div class="input-group " style="width: 15%;float: left;margin-right: 1%">
+            <span class="input-group-addon">售卖/出租</span>
+            <select name="" id="find_is_sale" class=" form-control">
+                <option value="0">全部</option>
+                <option value="1">售卖</option>
+                <option value="2">出租</option>
+            </select>
+        </div>
+        <div style="float: left;margin-right: 1%">
+            <button type="button" onclick="p_search();" class="btn">查询</button>
+        </div>
+    </form>
+</div>
+
+
+<form id="editUserInfo" class="form-horizontal m-t" style="display: none;">
+    <div class="form-group" style="width: 100%;">
+        <label class="col-sm-3 control-label">标题(zh) :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_title" name="edit_title" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">标题(hun) :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_title_hun" name="edit_title_hun" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">价格:</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_price" name="edit_price" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">地址(zh) :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_address" name="edit_address" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">地址(hun) :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_address_hun" name="edit_address_hun" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">有无电梯 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <select name="edit_is_lift" id="edit_is_lift">
+                <option value="1">有电梯</option>
+                <option value="2">无电梯</option>
+            </select>
+        </div>
+        <label class="col-sm-3 control-label">售卖/出租 :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <select name="edit_is_sale" id="edit_is_sale">
+                <option value="1">售卖</option>
+                <option value="2">出租</option>
+            </select>
+        </div>
+        <label class="col-sm-3 control-label">房屋面积 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_proportion" name="edit_proportion" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">花园面积 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_garden_area" name="edit_garden_area" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">车库面积 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_garage_area" name="edit_garage_area" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">房间数目 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_num" name="edit_num" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">卫生间数目 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_wc_num" name="edit_wc_num" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">所在楼层 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_floor_num" name="edit_floor_num" value="" required=""
+                   aria-required="true"/>
+        </div>
+        <label class="col-sm-3 control-label">建筑类型 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input type="text" class="form-control" id="edit_build_type" name="edit_build_type" value="" required=""
+                   aria-required="true"/>
+        </div>
+
+        <label class="col-sm-3 control-label">房屋建造时间 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <input id="edit_creat_house_time" class="laydate-icon" name="edit_creat_house_time">
+        </div>
+        <label class="col-sm-3 control-label">区域(zh) :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <select name="edit_area_new" id="edit_area_new" onchange="zhTohunArea(this)">
+                <volist name="area_info" id="zh_info">
+                    <option value="{$zh_info.id}">{$zh_info.city_name}</option>
+                </volist>
+            </select>
+        </div>
+        <label class="col-sm-3 control-label">区域(hun) :</label>
+        <div class="col-sm-7" style="height: 50px;">
+            <select name="edit_area_new_hun" id="edit_area_new_hun" onchange="hunTozhArea(this)">
+                <volist name="area_info" id="zh_info_hun">
+                    <option value="{$zh_info_hun.id}">{$zh_info_hun.city_name_hun}</option>
+                </volist>
+            </select>
+        </div>
+
+        <br style="clear: both"/>
+        <label class="col-sm-2 control-label" style="float: left;margin-left: 7%;">状态：</label>
+        <div class="radio radio-info radio-inline" style="float: left">
+            <input type="radio" id="edit_status1" value="1" checked="checked" name="edit_status">
+            <label for="edit_status1"> 开 </label>
+        </div>
+        <div class="radio radio-inline" style="float: left">
+            <input type="radio" id="edit_status2" value="0" name="edit_status">
+            <label for="edit_status2"> 关 </label>
+        </div>
+        <br style="clear: both"/>
+        <label class="col-sm-2 control-label" style="float: left;margin-left: 7%;">地暖：</label>
+        <div class="radio radio-info radio-inline" style="float: left">
+            <input type="radio" id="edit_is_floor_heat1" value="1" checked="checked" name="edit_is_floor_heat">
+            <label for="edit_is_floor_heat1"> 有 </label>
+        </div>
+        <div class="radio radio-inline" style="float: left">
+            <input type="radio" id="edit_is_floor_heat2" value="2" name="edit_is_floor_heat">
+            <label for="edit_is_floor_heat2"> 无 </label>
+        </div>
+        <br style="clear: both"/>
+        <label class="col-sm-2 control-label" style="float: left;margin-left: 7%;">独立淋浴：</label>
+        <div class="radio radio-info radio-inline" style="float: left">
+            <input type="radio" id="edit_is_dulilinyu1" value="1" checked="checked" name="edit_is_dulilinyu">
+            <label for="edit_is_dulilinyu1"> 有 </label>
+        </div>
+        <div class="radio radio-inline" style="float: left">
+            <input type="radio" id="edit_is_dulilinyu2" value="2" name="edit_is_dulilinyu">
+            <label for="edit_is_dulilinyu2"> 关 </label>
+        </div>
+        <br style="clear: both"/>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">房源照片 :</label>
+            <div class="col-sm-7" style="height: 50px;">
+                <span id="filepath"></span>
+                <input type="hidden" id="hidden_filepath" value="2" >
+                <!--<input type="file" name="member_cardfilepathn" id="member_cardfilepathn">-->
+
+            </div>
+        </div>
+        <div id="hidden_filepath_div" style="margin-left:17%;height: 100px;width: auto">
+
+        </div>
+        <br style="clear: both"/>
+        <label class="col-sm-3 control-label">简介 :</label>
+        <div class="col-sm-7" style="margin-bottom: 2%;height: 50px;">
+            <textarea name="edit_memo" id="edit_memo" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+</form>
+<div id = 'showImg' style="display: none">
+
+</div>
+<include file="Public/common_footer"/>
+<script src="__JS__/admin/uploadify/jquery.Huploadify.js"></script>
+<script src="__JS__/admin/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="__JS__/admin/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="__JS__/admin/demo/bootstrap-table-demo.min.js"></script>
+<script src="__JS__/admin/demo/laydate/laydate.js"></script>
+<script src="__JS__/admin/bootstrapValidator.js"></script>
+<script src="__JS__/admin/bootstrapValidator.min.js"></script>
+<script src="__JS__/admin/index.js"></script>
+<include file="HouseInfo/index_js"/>
+<script>
+    var start = {
+        elem: '#edit_creat_house_time',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(),
+        istime: false,
+        istoday: false,
+        choose: function (datas) {
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    laydate(start);
+
+    //给input赋值
+    $('#edit_creat_house_time').val(laydate.now(0, 'YYYY-MM-DD'));
+</script>
+</body>
+
+</html>
