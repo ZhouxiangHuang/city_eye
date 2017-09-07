@@ -10,6 +10,42 @@ app.controller('IndexController', ['$scope', 'ipCookie', function ($scope, ipCoo
     $scope.max_price = null;
     $scope.lan = $('#lan-val').val();
     $scope.area_list = {};
+    $scope.rent_price_min = {
+        '10000': 'HUF 10000',
+        '20000' :'HUF 20000',
+        '50000' :'HUF 50000',
+        '70000' :'HUF 70000',
+        '80000' :'HUF 80000',
+        '90000' :'HUF 90000',
+        '100000' :'HUF 100000'
+    };
+    $scope.rent_price_max = {
+        '10000': 'HUF 10000',
+        '20000' :'HUF 20000',
+        '50000' :'HUF 50000',
+        '70000' :'HUF 70000',
+        '80000' :'HUF 80000',
+        '90000' :'HUF 90000',
+        '100000' :'HUF 100000'
+    };
+    $scope.sale_price_min = {
+        '100000': 'HUF 100000',
+        '200000' :'HUF 200000',
+        '500000' :'HUF 500000',
+        '700000' :'HUF 700000',
+        '800000' :'HUF 800000',
+        '900000' :'HUF 900000',
+        '1000000' :'HUF 1000000'
+    };
+    $scope.sale_price_max = {
+        '100000': 'HUF 100000',
+        '200000' :'HUF 200000',
+        '500000' :'HUF 500000',
+        '700000' :'HUF 700000',
+        '800000' :'HUF 800000',
+        '900000' :'HUF 900000',
+        '1000000' :'HUF 1000000'
+    };
     $.ajax({
         url: '/home/index/getAreaList',
         data: {},
@@ -22,17 +58,31 @@ app.controller('IndexController', ['$scope', 'ipCookie', function ($scope, ipCoo
             } else layer.msg(res.msg);
         },
         error: function () {
-            layer.msg('获取地区信息失败');
+            if($scope.lan === 'hu-hu') {
+                layer.msg('Nem sikerült tájékozódási információt szerezni');
+            } else {
+                layer.msg('获取地区信息失败');
+            }
+
         }
     });
 
     $scope.jumpToLists = function () {
         if ($scope.min_area > $scope.max_area) {
-            layer.msg('请正确选择面积');
+            if($scope.lan === 'hu-hu') {
+                layer.msg('Kérjük, válasszon helyet helyesen');
+            } else {
+                layer.msg('请正确选择面积');
+            }
+
             return false;
         }
         if ($scope.min_price > $scope.max_price) {
-            layer.msg('请正确选择价格');
+            if($scope.lan === 'hu-hu') {
+                layer.msg('Kérjük, válassza ki a megfelelő árat');
+            } else {
+                layer.msg('请正确选择价格');
+            }
             return false;
         }
         ipCookie('location_area', $scope.location_area, { path: '/home/index/lists' });
@@ -52,8 +102,18 @@ app.controller('IndexController', ['$scope', 'ipCookie', function ($scope, ipCoo
         } else {
             window.location.href = '/?l=zh-CN';
         }
-
     };
+    $scope.choosePrice = function () {
+      if($scope.type !== 'rent' && $scope.type !== 'sale') {
+          if($scope.lan === 'hu-hu') {
+              layer.msg('Nem választottál bérelni / eladni');
+          } else {
+              layer.msg('您未选择 出租/售卖');
+          }
+
+      }
+    };
+
 
 
 

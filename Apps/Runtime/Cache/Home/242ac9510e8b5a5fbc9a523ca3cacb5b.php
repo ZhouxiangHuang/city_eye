@@ -138,49 +138,17 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                <input ng-model="min_area" type="text" name="min-area" id="property-min-area" placeholder="Min Area (sqft)">
-                <input ng-model="max_area" type="text" name="max-area" id="property-max-area" placeholder="Max Area (sqft)">
-                <select ng-model="min_price" name="min-price" id="property-min-price">
-                    <option value=""><?php echo (L("min_price")); ?></option>
-                    <option value="1000">$1000</option>
-                    <option value="5000">$5000</option>
-                    <option value="10000">$10000</option>
-                    <option value="50000">$50000</option>
-                    <option value="100000">$100000</option>
-                    <option value="200000">$200000</option>
-                    <option value="300000">$300000</option>
-                    <option value="400000">$400000</option>
-                    <option value="500000">$500000</option>
-                    <option value="600000">$600000</option>
-                    <option value="700000">$700000</option>
-                    <option value="800000">$800000</option>
-                    <option value="900000">$900000</option>
-                    <option value="1000000">$1000000</option>
-                    <option value="1500000">$1500000</option>
-                    <option value="2000000">$2000000</option>
-                    <option value="2500000">$2500000</option>
-                    <option value="5000000">$5000000</option>
+                <input ng-model="min_area" type="text" name="min-area" id="property-min-area" placeholder="<?php echo (L("min_area")); ?> (m²)">
+                <input ng-model="max_area" type="text" name="max-area" id="property-max-area" placeholder="<?php echo (L("max_area")); ?> (m²)">
+                <select ng-click="choosePrice()"   ng-model="min_price" name="min-price" id="property-min-price">
+                    <option  value=""><?php echo (L("min_price")); ?></option>
+                    <option ng-if="type == 'rent'" ng-repeat="(index, price) in rent_price_min" value="{{ index }}">{{ price }}</option>
+                    <option ng-if="type == 'sale'" ng-repeat="(index, price) in sale_price_min" value="{{ index }}">{{ price }}</option>
                 </select>
-                <select ng-model="max_price" name="max-price" id="property-max-price">
+                <select ng-click="choosePrice()" ng-model="max_price" name="max-price" id="property-max-price">
                     <option value=""><?php echo (L("max_price")); ?></option>
-                    <option value="5000">$5000</option>
-                    <option value="10000">$10000</option>
-                    <option value="50000">$50000</option>
-                    <option value="100000">$100000</option>
-                    <option value="200000">$200000</option>
-                    <option value="300000">$300000</option>
-                    <option value="400000">$400000</option>
-                    <option value="500000">$500000</option>
-                    <option value="600000">$600000</option>
-                    <option value="700000">$700000</option>
-                    <option value="800000">$800000</option>
-                    <option value="900000">$900000</option>
-                    <option value="1000000">$1000000</option>
-                    <option value="1500000">$1500000</option>
-                    <option value="2000000">$2000000</option>
-                    <option value="2500000">$2500000</option>
-                    <option value="5000000">$5000000</option>
-                    <option value="10000000">$10000000</option>
+                    <option ng-if="type == 'rent'" ng-repeat="(index, price) in rent_price_max" value="{{ index }}">{{ price }}</option>
+                    <option ng-if="type == 'sale'" ng-repeat="(index, price) in sale_price_max" value="{{ index }}">{{ price }}</option>
                 </select>
             </fieldset>
             <div type="submit" ng-click="jumpToLists()" class="btn btn-default btn-lg text-center"><?php echo (L("search")); ?> <br class="hidden-sm hidden-xs"> <?php echo (L("housing_resources")); ?>

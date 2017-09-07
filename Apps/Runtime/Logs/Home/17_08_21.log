@@ -35,7 +35,7 @@ INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000517s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000633s ]
-NOTIC: [8] Undefined variable: page /var/www/html/city_eye/current/Apps/Runtime/Cache/Home/27e85bd5af03f6b7a02d4c7688f572cc.php 第 263 行.
+NOTIC: [8] Undefined variable: page /Users/shawn/Dev/cityEye/Apps/Runtime/Cache/Home/27e85bd5af03f6b7a02d4c7688f572cc.php 第 263 行.
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019313s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.019412s ]
 INFO: [ view_filter ] --START--
@@ -1051,7 +1051,7 @@ INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000731s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000872s ]
-NOTIC: [8] Undefined variable: page /var/www/html/city_eye/current/Apps/Runtime/Cache/Home/27e85bd5af03f6b7a02d4c7688f572cc.php 第 263 行.
+NOTIC: [8] Undefined variable: page /Users/shawn/Dev/cityEye/Apps/Runtime/Cache/Home/27e85bd5af03f6b7a02d4c7688f572cc.php 第 263 行.
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024462s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.024576s ]
 INFO: [ view_filter ] --START--

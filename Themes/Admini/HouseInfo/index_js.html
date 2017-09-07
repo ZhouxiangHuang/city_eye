@@ -144,7 +144,12 @@
                 },
                 {
                     field: 'build_type',
-                    title: '建筑类型',
+                    title: '建筑类型(zh)',
+                    align: 'left',
+                },
+                {
+                    field: 'build_type_hun',
+                    title: '建筑类型(hun)',
                     align: 'left',
                 },
                 {
@@ -377,9 +382,11 @@
                     $('#edit_garden_area').val(data.data.info.garden_area);
                     $('#edit_floor_num').val(data.data.info.floor_num);
                     $('#edit_build_type').val(data.data.info.build_type);
+                    $('#edit_build_type_hun').val(data.data.info.build_type_hun);
                     $('#edit_wc_num').val(data.data.info.wc_num);
                     $('#edit_garage_area').val(data.data.info.garage_area);
                     $('#edit_memo').text(data.data.info.memo);
+                    $('#edit_memo_hun').text(data.data.info.memo_hun);
                     $('#edit_creat_house_time').val(data.data.info.creat_house_time);
 
                     if(data.data.info.status==1){

@@ -117,7 +117,7 @@
                     <option ng-if="lan !='hu-hu'" ng-repeat="area in area_list" value="{{ area.id }}">{{ area.city_name }}</option>
                     <option ng-if="lan =='hu-hu'" ng-repeat="area in area_list" value="{{ area.id }}">{{ area.city_name_hun }}</option>
                 </select>
-                <select ng-model="type" name="type" id="property-sub-location">
+                <select ng-model="type" ng-change="changeType()" name="type" id="property-sub-location">
                     <option value="">{$Think.lang.type}</option>
                     <option value="rent">{$Think.lang.rent}</option>
                     <option value="sale">{$Think.lang.sale}</option>
@@ -150,47 +150,15 @@
                 </select>
                 <input ng-model="min_area" type="text" name="min-area" id="property-min-area" placeholder="{$Think.lang.min_area} (m²)">
                 <input ng-model="max_area" type="text" name="max-area" id="property-max-area" placeholder="{$Think.lang.max_area} (m²)">
-                <select ng-model="min_price" name="min-price" id="property-min-price">
-                    <option value="">{$Think.lang.min_price}</option>
-                    <option value="1000">HUF 1000</option>
-                    <option value="5000">HUF 5000</option>
-                    <option value="10000">HUF 10000</option>
-                    <option value="50000">HUF 50000</option>
-                    <option value="100000">HUF 100000</option>
-                    <option value="200000">HUF 200000</option>
-                    <option value="300000">HUF 300000</option>
-                    <option value="400000">HUF 400000</option>
-                    <option value="500000">HUF 500000</option>
-                    <option value="600000">HUF 600000</option>
-                    <option value="700000">HUF 700000</option>
-                    <option value="800000">HUF 800000</option>
-                    <option value="900000">HUF 900000</option>
-                    <option value="1000000">HUF 1000000</option>
-                    <option value="1500000">HUF 1500000</option>
-                    <option value="2000000">HUF 2000000</option>
-                    <option value="2500000">HUF 2500000</option>
-                    <option value="5000000">HUF 5000000</option>
+                <select ng-click="choosePrice()" ng-model="min_price" name="min-price" id="property-min-price">
+                    <option  value="">{$Think.lang.min_price}</option>
+                    <option ng-if="type == 'rent'" ng-repeat="(index, price) in rent_price_min" value="{{ index }}">{{ price }}</option>
+                    <option ng-if="type == 'sale'" ng-repeat="(index, price) in sale_price_min" value="{{ index }}">{{ price }}</option>
                 </select>
-                <select ng-model="max_price" name="max-price" id="property-max-price">
+                <select ng-click="choosePrice()" ng-model="max_price" name="max-price" id="property-max-price">
                     <option value="">{$Think.lang.max_price}</option>
-                    <option value="5000">HUF 5000</option>
-                    <option value="10000">HUF 10000</option>
-                    <option value="50000">HUF 50000</option>
-                    <option value="100000">HUF 100000</option>
-                    <option value="200000">HUF 200000</option>
-                    <option value="300000">HUF 300000</option>
-                    <option value="400000">HUF 400000</option>
-                    <option value="500000">HUF 500000</option>
-                    <option value="600000">HUF 600000</option>
-                    <option value="700000">HUF 700000</option>
-                    <option value="800000">HUF 800000</option>
-                    <option value="900000">HUF 900000</option>
-                    <option value="1000000">HUF 1000000</option>
-                    <option value="1500000">HUF 1500000</option>
-                    <option value="2000000">HUF 2000000</option>
-                    <option value="2500000">HUF 2500000</option>
-                    <option value="5000000">HUF 5000000</option>
-                    <option value="10000000">HUF 10000000</option>
+                    <option ng-if="type == 'rent'" ng-repeat="(index, price) in rent_price_max" value="{{ index }}">{{ price }}</option>
+                    <option ng-if="type == 'sale'" ng-repeat="(index, price) in sale_price_max" value="{{ index }}">{{ price }}</option>
                 </select>
             </fieldset>
             <div type="submit"  ng-click="jumpToLists()" class="btn btn-default btn-lg text-center">{$Think.lang.search} <br class="hidden-sm hidden-xs"> {$Think.lang.housing_resources}

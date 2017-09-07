@@ -162,20 +162,18 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <section class="widget twitter-widget clearfix">
-                        <h4 class="title">Latest Tweets</h4>
-                        <div id="twitter-feeds" class="clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi</div>
+                        <h4 class="title"><?php echo (L("our_service")); ?></h4>
+                        <div id="twitter-feeds" class="clearfix"><?php echo (L("company_desc")); ?></div>
                     </section>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <section class="widget address-widget clearfix">
-                        <h4 class="title">OUR OFFICE</h4>
+                        <h4 class="title"><?php echo (L("office")); ?></h4>
                         <ul>
-                            <li><i class="fa fa-map-marker"></i> 4 Tottenham Road, London, England.</li>
-                            <li><i class="fa fa-phone"></i> (123) 45678910</li>
-                            <li><i class="fa fa-envelope"></i> huycoi.art@gmail.com</li>
-                            <li><i class="fa fa-fax"></i> +84 962 216 601</li>
+                            <li><i class="fa fa-map-marker"></i> Szallas u 47/b 2emelet 202szoba.</li>
+                            <li><i class="fa fa-phone"></i> + 3630 8892125</li>
+                            <li><i class="fa fa-envelope"></i> info@cityeyebp.com</li>
+                            <li><i class="fa fa-weixin"></i> cityeye888</li>
                             <li><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 18:00</li>
                         </ul>
                     </section>

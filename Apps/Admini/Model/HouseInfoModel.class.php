@@ -134,9 +134,11 @@ class HouseInfoModel extends Model
         $data['address'] = !empty($from['edit_address']) ? strval(trim($from['edit_address'])) : '';
         $data['address_hun'] = !empty($from['edit_address_hun']) ? strval(trim($from['edit_address_hun'])) : '';
         $data['is_lift'] = !empty($from['edit_is_lift']) ? trim($from['edit_is_lift']) : '';
+        $data['is_sale'] = !empty($from['edit_is_sale']) ? trim($from['edit_is_sale']) : '';
         $data['proportion'] = !empty($from['edit_proportion']) ? trim($from['edit_proportion']) : '';
         $data['floor_num'] = !empty($from['edit_floor_num']) ? trim($from['edit_floor_num']) : '';
         $data['build_type'] = !empty($from['edit_build_type']) ? trim($from['edit_build_type']) : '';
+        $data['build_type_hun'] = !empty($from['edit_build_type_hun']) ? trim($from['edit_build_type_hun']) : '';
         $data['creat_house_time'] = !empty($from['edit_creat_house_time']) ? trim(strtotime($from['edit_creat_house_time'])) : '';
         $data['garden_area'] = !empty($from['edit_garden_area']) ? trim($from['edit_garden_area']) : '';
         $data['garage_area'] = !empty($from['edit_garage_area']) ? trim($from['edit_garage_area']) : '';
@@ -145,6 +147,8 @@ class HouseInfoModel extends Model
         $data['status'] = !empty($from['edit_status']) ? trim($from['edit_status']) : '';
         $data['is_dulilinyu'] = !empty($from['edit_is_dulilinyu']) ? trim($from['edit_is_dulilinyu']) : '';
         $data['is_floor_heat'] = !empty($from['edit_is_floor_heat']) ? trim($from['edit_is_floor_heat']) : '';
+        $data['memo'] = !empty($from['edit_memo']) ? trim($from['edit_memo']) : '';
+        $data['memo_hun'] = !empty($from['edit_memo_hun']) ? trim($from['edit_memo_hun']) : '';
 
         return $data;
     }
